@@ -43,6 +43,7 @@
         "drupal/migrate_source_xls": "^1.2",
         "drupal/migrate_tools": "^4.1",
         "drupal/vartheme_bs4": "^6.0@RC",
+        "drupal/vmi": "^2.2",
         "drush/drush": "^9.0.0",
         "kgaut/potx": "dev-8.x-1.x",
         "vlucas/phpdotenv": "^2.4",
