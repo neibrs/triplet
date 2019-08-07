@@ -1,0 +1,6 @@
+[submodule "web/modules/neibers/themes/coloradmin"]
+	path = web/modules/neibers/themes/coloradmin
+	url = git@git.drupal.org:project/coloradmin.git
+[submodule "web/modules/neibers/themes/smartadmin"]
+	path = web/modules/neibers/themes/smartadmin
+	url = git@git.drupal.org:project/smartadmin.git
