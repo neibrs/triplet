@@ -1,0 +1,8 @@
+{
+    "name": "drupal/vartheme",
+    "type": "drupal-theme",
+    "license": "GPL-2.0+",
+    "require": {
+        "drupal/bootstrap_barrio": "^4.8.0"
+    }
+}
