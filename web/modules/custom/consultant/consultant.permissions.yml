@@ -1,0 +1,19 @@
+add consultant entities:
+  title: 'Create new Consultant entities'
+
+administer consultant entities:
+  title: 'Administer Consultant entities'
+  description: 'Allow to access the administration form to configure Consultant entities.'
+  restrict access: true
+
+delete consultant entities:
+  title: 'Delete Consultant entities'
+
+edit consultant entities:
+  title: 'Edit Consultant entities'
+
+view published consultant entities:
+  title: 'View published Consultant entities'
+
+view unpublished consultant entities:
+  title: 'View unpublished Consultant entities'

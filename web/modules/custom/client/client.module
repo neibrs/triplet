@@ -1,0 +1,120 @@
+<?php
+
+/**
+ * @file
+ * Contains client.module.
+ */
+
+use Drupal\consultant\Entity\ConsultantInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function client_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the client module.
+    case 'help.page.client':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function client_theme() {
+  $theme = [];
+  $theme['client'] = [
+    'render element' => 'elements',
+    'file' => 'client.page.inc',
+    'template' => 'client',
+  ];
+  $theme['client_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'client.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function client_theme_suggestions_client(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#client'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'client__' . $sanitized_view_mode;
+  $suggestions[] = 'client__' . $entity->bundle();
+  $suggestions[] = 'client__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'client__' . $entity->id();
+  $suggestions[] = 'client__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function client_entity_base_field_info(EntityTypeInterface $entity_type) {
+  if ($entity_type->id() == 'consultant') {
+    $fields = [];
+
+    $fields['client'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Client'))
+      ->setSetting('target_type', 'client')
+      ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
+      ->setDisplayOptions('view', [
+        'type' => 'entity_reference_label',
+        'weight' => 6,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'entity_reference_autocomplete',
+        'weight' => 6,
+        'settings' => [
+          'match_operator' => 'CONTAINS',
+          'size' => '60',
+          'placeholder' => '',
+        ],
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    return $fields;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function client_consultant_delete(ConsultantInterface $entity) {
+  // Remove the clients from the deleted consultant.
+  foreach ($clients = $entity->get('client')->referencedEntities() as $client) {
+    /** @var \Drupal\client\Entity\ClientInterface $client */
+    $client->get('consultant')->removeItem($entity);
+    $client->save();
+
+    $entity->get('client')->removeItem($client);
+    $entity->save();
+  }
+
+  $entity->delete();
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function client_consultant_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  $settings = \Drupal::configFactory()->getEditable('client.setting');
+  $settings->set('max_cid', $entity->id())
+    ->save();
+}

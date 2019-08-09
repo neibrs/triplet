@@ -1,0 +1,14 @@
+
+# Consultant menu items definition
+entity.consultant.collection:
+  title: 'Consultant list'
+  route_name: entity.consultant.collection
+  description: 'List Consultant entities'
+  parent: system.admin_structure
+  weight: 100
+
+consultant.admin.structure.settings:
+  title: 'Consultant settings'
+  description: 'Configure Consultant entities'
+  route_name: consultant.settings
+  parent: system.admin_structure

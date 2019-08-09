@@ -1,0 +1,6 @@
+entity.consultant.add_form:
+  route_name: entity.consultant.add_form
+  title: 'Add'
+  appears_on:
+    - entity.consultant.collection
+    - entity.consultant.canonical

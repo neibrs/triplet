@@ -1,0 +1,24 @@
+client.type.*:
+  type: config_entity
+  label: 'Client type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+
+
+client.settings:
+  type: config_object
+  label: 'Consultant indexes'
+  mapping:
+    cid:
+      type: integer
+      label: 'Current consultant id'
+    max_cid:
+      type: integer
+      label: 'Max consultant id'

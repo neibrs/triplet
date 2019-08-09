@@ -1,0 +1,21 @@
+# Consultant routing definition
+consultant.settings_tab:
+  route_name: consultant.settings
+  title: 'Settings'
+  base_route: consultant.settings
+
+entity.consultant.canonical:
+  route_name: entity.consultant.canonical
+  base_route: entity.consultant.canonical
+  title: 'View'
+
+entity.consultant.edit_form:
+  route_name: entity.consultant.edit_form
+  base_route: entity.consultant.canonical
+  title: 'Edit'
+
+entity.consultant.delete_form:
+  route_name:  entity.consultant.delete_form
+  base_route:  entity.consultant.canonical
+  title: Delete
+  weight: 10

@@ -1,0 +1,11 @@
+entity.client.add_form:
+  route_name: entity.client.add_page
+  title: 'Add'
+  appears_on:
+    - entity.client.collection
+    - entity.client.canonical
+entity.client_type.add_form:
+  route_name: entity.client_type.add_form
+  title: 'Add type'
+  appears_on:
+    - entity.client_type.collection

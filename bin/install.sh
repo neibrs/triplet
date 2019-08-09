@@ -1,11 +1,11 @@
 #!/bin/bash
 
 
-chmod -R a+rw web/sites/default
+sudo chmod -R a+rw web/sites/default
 rm web/sites/default/settings.php
 
 #vendor/bin/drush site:install -y --account-pass=admin --db-url=mysql://root:root@mariadb/laradrupal --site-name="NIDC"
-vendor/bin/drush site:install -y --account-pass=admin --db-url=mysql://root:root@127.0.0.1:8889/triplet --site-name="NIDC"
+vendor/bin/drush site:install -y --account-pass=admin --db-url=mysql://root:root@127.0.0.1/triplet --site-name="NIDC"
 
 #echo "ini_set('memory_limit', -1);" > web/sites/default/settings.php
 

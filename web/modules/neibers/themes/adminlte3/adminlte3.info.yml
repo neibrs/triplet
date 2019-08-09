@@ -1,0 +1,12 @@
+name: Adminlte3
+type: theme
+description: 'Base on adminlte 3 with bootstrap 4.'
+package: Neibers
+core: 8.x
+libraries:
+  - adminlte3/global
+ 
+base theme: seven
+
+regions:
+  content: Content
