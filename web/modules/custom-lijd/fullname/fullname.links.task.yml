@@ -1,0 +1,21 @@
+# Fullname routing definition
+fullname.settings_tab:
+  route_name: fullname.settings
+  title: 'Settings'
+  base_route: fullname.settings
+
+entity.fullname.canonical:
+  route_name: entity.fullname.canonical
+  base_route: entity.fullname.canonical
+  title: 'View'
+
+entity.fullname.edit_form:
+  route_name: entity.fullname.edit_form
+  base_route: entity.fullname.canonical
+  title: 'Edit'
+
+entity.fullname.delete_form:
+  route_name:  entity.fullname.delete_form
+  base_route:  entity.fullname.canonical
+  title: Delete
+  weight: 10

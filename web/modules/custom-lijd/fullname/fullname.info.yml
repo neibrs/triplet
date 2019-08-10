@@ -1,6 +1,6 @@
-name: 'Client'
+name: 'Fullname'
 type: module
 core: 8.x
 package: 'Custom'
 dependencies:
-  - consultant
+  - migrate_source_xls

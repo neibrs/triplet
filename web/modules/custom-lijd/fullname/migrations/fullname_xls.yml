@@ -1,0 +1,26 @@
+langcode: en
+status: true
+id: fullname_xls
+label: Fullname(xls)
+migration_tags: { }
+source:
+  plugin: xls
+  header_row: 1
+  path: modules/custom/fullname/tests/data/fullname.xls
+  sheet_name: Sheet2
+  keys:
+    - fullname
+  columns:
+    0:
+      Firstname: Firstname
+    1:
+      Lastname: Lastname
+    2:
+      fullname: fullname
+process:
+  name: fullname
+  first_name: Firstname
+  last_name: Lastname
+destination:
+  plugin: entity:fullname
+migration_dependencies: { }

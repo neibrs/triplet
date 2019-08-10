@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\client\Form;
+namespace Drupal\fullname\Form;
 
 use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Core\Entity\ContentEntityForm;
@@ -11,11 +11,11 @@ use Drupal\Core\Session\AccountProxyInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Form controller for Client edit forms.
+ * Form controller for Fullname edit forms.
  *
- * @ingroup client
+ * @ingroup fullname
  */
-class ClientForm extends ContentEntityForm {
+class FullnameForm extends ContentEntityForm {
 
   /**
    * The current user account.
@@ -25,7 +25,7 @@ class ClientForm extends ContentEntityForm {
   protected $account;
 
   /**
-   * Constructs a new ClientForm.
+   * Constructs a new FullnameForm.
    *
    * @param \Drupal\Core\Entity\EntityRepositoryInterface $entity_repository
    *   The entity repository service.
@@ -59,8 +59,21 @@ class ClientForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var \Drupal\client\Entity\Client $entity */
+    /* @var \Drupal\fullname\Entity\Fullname $entity */
     $form = parent::buildForm($form, $form_state);
+
+    return $form;
+  }
+
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    parent::validateForm($form, $form_state);
+
+    if (preg_match("/\p{Han}+/u", $form_state->getValue('first_name')[0]['value'])) {
+      $form_state->setErrorByName('first_name', $this->t('It can not contain chinese string.'));
+    }
+    if (preg_match("/\p{Han}+/u", $form_state->getValue('last_name')[0]['value'])) {
+      $form_state->setErrorByName('first_name', $this->t('It can not contain chinese string.'));
+    }
 
     return $form;
   }
@@ -75,17 +88,17 @@ class ClientForm extends ContentEntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        $this->messenger()->addMessage($this->t('Created the %label Client.', [
+        $this->messenger()->addMessage($this->t('Created the %label Fullname.', [
           '%label' => $entity->label(),
         ]));
         break;
 
       default:
-        $this->messenger()->addMessage($this->t('Saved the %label Client.', [
+        $this->messenger()->addMessage($this->t('Saved the %label Fullname.', [
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.client.canonical', ['client' => $entity->id()]);
+    $form_state->setRedirect('entity.fullname.canonical', ['fullname' => $entity->id()]);
   }
 
 }

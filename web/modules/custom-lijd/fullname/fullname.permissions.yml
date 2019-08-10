@@ -1,0 +1,19 @@
+add fullname:
+  title: 'Create new Fullname entities'
+
+administer fullname:
+  title: 'Administer Fullname entities'
+  description: 'Allow to access the administration form to configure Fullname entities.'
+  restrict access: true
+
+delete fullname:
+  title: 'Delete Fullname entities'
+
+edit fullname:
+  title: 'Edit Fullname entities'
+
+view published fullname:
+  title: 'View published Fullname entities'
+
+view unpublished fullname:
+  title: 'View unpublished Fullname entities'

@@ -114,7 +114,7 @@ function client_consultant_delete(ConsultantInterface $entity) {
  * Implements hook_ENTITY_TYPE_insert().
  */
 function client_consultant_insert(Drupal\Core\Entity\EntityInterface $entity) {
-  $settings = \Drupal::configFactory()->getEditable('client.setting');
+  $settings = \Drupal::configFactory()->getEditable('client.settings');
   $settings->set('max_cid', $entity->id())
     ->save();
 }

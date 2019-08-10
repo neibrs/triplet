@@ -1,0 +1,14 @@
+
+# Fullname menu items definition
+entity.fullname.collection:
+  title: 'Fullname list'
+  route_name: entity.fullname.collection
+  description: 'List Fullname entities'
+  parent: system.admin_structure
+  weight: 100
+
+fullname.admin.structure.settings:
+  title: 'Fullname settings'
+  description: 'Configure Fullname entities'
+  route_name: fullname.settings
+  parent: system.admin_structure

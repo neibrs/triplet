@@ -1,0 +1,31 @@
+<?php
+
+use Drupal\migrate\MigrateExecutable;
+
+/**
+ * Implements hook_install().
+ *
+ * @throws \Drupal\migrate\MigrateException
+ */
+function fullname_install() {
+
+  // It's only for test data, not used in production environment.
+  $imports = [
+    'fullname_xls' => [
+      'source' => [
+        'path' => drupal_get_path('module', 'fullname') . '/tests/data/fullname.xls',
+      ],
+    ],
+  ];
+  $migration_manager = \Drupal::service('plugin.manager.migration');
+  if (!empty($imports)) {
+    foreach ($imports as $id => $configuration) {
+      /** @var \Drupal\migrate\Plugin\MigrationInterface $migration */
+      $migration = $migration_manager->createInstance($id, $configuration);
+      $migration->getIdMap()->prepareUpdate();
+      $executable = new MigrateExecutable($migration);
+      $executable->import();
+    }
+  }
+}
+

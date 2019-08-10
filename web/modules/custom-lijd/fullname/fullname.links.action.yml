@@ -1,0 +1,8 @@
+entity.fullname.add_form:
+  route_name: entity.fullname.add_form
+  title: 'Add'
+  options:
+    query:
+      destination: '/fullname'
+  appears_on:
+    - entity.fullname.collection

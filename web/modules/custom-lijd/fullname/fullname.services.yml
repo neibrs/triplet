@@ -1,0 +1,4 @@
+services:
+  fullname.check:
+    class: Drupal\fullname\NameProvider
+    arguments: ['@entity_type.manager']
