@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c534fb07f127a8db71d079e9b0b43a0d",
+    "content-hash": "54cf3be0b2c6268ef63fe8405ea541a5",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2596,62 +2596,6 @@
             }
         },
         {
-            "name": "drupal/adminimal_theme",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/adminimal_theme.git",
-                "reference": "8.x-1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/adminimal_theme-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "fb4457015d743faafecaa0776d2bebf2829a6738"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1558584484",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "ANDiTKO",
-                    "homepage": "https://www.drupal.org/user/1428124"
-                },
-                {
-                    "name": "andrey.troeglazov",
-                    "homepage": "https://www.drupal.org/user/3145389"
-                },
-                {
-                    "name": "realityloop",
-                    "homepage": "https://www.drupal.org/user/139189"
-                }
-            ],
-            "description": "Drupal administration theme with modern minimalist design.",
-            "homepage": "https://www.drupal.org/project/adminimal_theme",
-            "support": {
-                "source": "https://git.drupalcode.org/project/adminimal_theme",
-                "issues": "https://www.drupal.org/project/issues/adminimal_theme"
-            }
-        },
-        {
             "name": "drupal/advancedqueue",
             "version": "1.0.0-beta3",
             "source": {
@@ -2793,123 +2737,6 @@
                 "docs": "https://drupal-bootstrap.org",
                 "issues": "https://www.drupal.org/project/issues/bootstrap",
                 "irc": "irc://irc.freenode.org/drupal-bootstrap"
-            }
-        },
-        {
-            "name": "drupal/bootstrap_barrio",
-            "version": "4.22.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
-                "reference": "8.x-4.22"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.22.zip",
-                "reference": "8.x-4.22",
-                "shasum": "93613bd20cd59997d60d6ce036384d46dfb3fce2"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-4.22",
-                    "datestamp": "1551325387",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Alberto Siles",
-                    "homepage": "https://www.drupal.org/user/2824325",
-                    "email": "alberto@siles.pe"
-                },
-                {
-                    "name": "hatuhay",
-                    "homepage": "https://www.drupal.org/user/827704"
-                }
-            ],
-            "description": "Bootstrap 4 base theme.",
-            "homepage": "https://www.drupal.org/project/bootstrap_barrio",
-            "support": {
-                "source": "https://git.drupalcode.org/project/bootstrap_barrio"
-            }
-        },
-        {
-            "name": "drupal/claro",
-            "version": "1.0.0-alpha4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/claro.git",
-                "reference": "8.x-1.0-alpha4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/claro-8.x-1.0-alpha4.zip",
-                "reference": "8.x-1.0-alpha4",
-                "shasum": "151906eaef0fa2ade0cbffb2248565066544055a"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha4",
-                    "datestamp": "1564677185",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "balsama",
-                    "homepage": "https://www.drupal.org/user/223087"
-                },
-                {
-                    "name": "ckrina",
-                    "homepage": "https://www.drupal.org/user/1206650"
-                },
-                {
-                    "name": "huzooka",
-                    "homepage": "https://www.drupal.org/user/281301"
-                },
-                {
-                    "name": "lauriii",
-                    "homepage": "https://www.drupal.org/user/1078742"
-                },
-                {
-                    "name": "saschaeggi",
-                    "homepage": "https://www.drupal.org/user/1999056"
-                }
-            ],
-            "description": "A clean, accessible and powerful Drupal administration theme.",
-            "homepage": "https://www.drupal.org/project/claro",
-            "support": {
-                "source": "https://git.drupalcode.org/project/claro",
-                "docs": "https://www.drupal.org/docs/8/modules/claro",
-                "issues": "https://www.drupal.org/project/issues/claro"
             }
         },
         {
@@ -4561,47 +4388,6 @@
             }
         },
         {
-            "name": "drupal/drupal-library-installer-plugin",
-            "version": "0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/promet/drupal-libraries-installer-plugin.git",
-                "reference": "6d4eb744a1f244dfc290976104ecf522466a768b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/promet/drupal-libraries-installer-plugin/zipball/6d4eb744a1f244dfc290976104ecf522466a768b",
-                "reference": "6d4eb744a1f244dfc290976104ecf522466a768b",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/neibrs/dists/%package%/%version%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "composer-plugin-api": "^1.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Drupal\\Composer\\DrupalLibraryInstallerPlugin"
-            },
-            "autoload": {
-                "psr-0": {
-                    "Drupal\\Composer": "src/"
-                }
-            },
-            "notification-url": "https://repo.packagist.com/neibrs/downloads/",
-            "authors": [
-                {
-                    "name": "Allan Chappell",
-                    "email": "generalredneck@gmail.com"
-                }
-            ],
-            "time": "2015-12-04T21:39:03+00:00"
-        },
-        {
             "name": "drupal/drush_language",
             "version": "1.0.0-rc2",
             "source": {
@@ -5486,21 +5272,21 @@
         },
         {
             "name": "drupal/migrate_tools",
-            "version": "4.1.0",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/migrate_tools.git",
-                "reference": "8.x-4.1"
+                "reference": "8.x-4.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-4.1.zip",
-                "reference": "8.x-4.1",
-                "shasum": "0355d5309fbb738759332779d0ecf5f19a1da0a4"
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-4.3.zip",
+                "reference": "8.x-4.3",
+                "shasum": "dbff0c5dbfdeeeca2294cbd2a858b851b3ba0753"
             },
             "require": {
                 "drupal/core": "^8.3",
-                "drupal/migrate_plus": "^4"
+                "drupal/migrate_plus": "^4 || ^5"
             },
             "require-dev": {
                 "drupal/migrate_plus": "4.x-dev",
@@ -5513,8 +5299,8 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-4.1",
-                    "datestamp": "1546879080",
+                    "version": "8.x-4.3",
+                    "datestamp": "1565213885",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6204,75 +5990,6 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
-            }
-        },
-        {
-            "name": "drupal/vartheme_bs4",
-            "version": "6.0.0-rc3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/vartheme_bs4.git",
-                "reference": "8.x-6.0-rc3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/vartheme_bs4-8.x-6.0-rc3.zip",
-                "reference": "8.x-6.0-rc3",
-                "shasum": "92cf81deb010a5efdc5b3b19f659459b51a6388d"
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "cweagans/composer-patches": "~1.0",
-                "drupal/bootstrap_barrio": "~4.0",
-                "drupal/core": "~8.0",
-                "drupal/drupal-library-installer-plugin": "^0.3",
-                "oomphinc/composer-installers-extender": "~1.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-6.x": "6.x-dev",
-                    "dev-8.x-6.x": "8.6.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-6.0-rc3",
-                    "datestamp": "1562054586",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                },
-                "installer-types": [
-                    "bower-asset",
-                    "npm-asset"
-                ],
-                "enable-patching": true,
-                "composer-exit-on-patch-failure": true
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Vardot",
-                    "homepage": "https://www.drupal.org/vardot",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "RajabNatshah",
-                    "homepage": "https://www.drupal.org/user/1414312"
-                },
-                {
-                    "name": "waleedq",
-                    "homepage": "https://www.drupal.org/user/375290"
-                }
-            ],
-            "description": "A SASS base theme for Varbase standard websites. Based on Barrio (Bootstrap 4) theme.",
-            "homepage": "https://www.drupal.org/project/vartheme_bs4",
-            "support": {
-                "source": "http://cgit.drupalcode.org/vartheme_bs4",
-                "issues": "http://drupal.org/project/issues/vartheme_bs4"
             }
         },
         {
@@ -7454,54 +7171,6 @@
                 "php"
             ],
             "time": "2019-05-25T20:07:01+00:00"
-        },
-        {
-            "name": "oomphinc/composer-installers-extender",
-            "version": "v1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/oomphinc/composer-installers-extender.git",
-                "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
-                "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/neibrs/dists/%package%/%version%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "composer-plugin-api": "^1.0",
-                "composer/installers": "^1.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "OomphInc\\ComposerInstallersExtender\\": "src/"
-                }
-            },
-            "notification-url": "https://repo.packagist.com/neibrs/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Stephen Beemsterboer",
-                    "email": "stephen@oomphinc.com",
-                    "homepage": "https://github.com/balbuf"
-                }
-            ],
-            "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
-            "homepage": "http://www.oomphinc.com/",
-            "time": "2017-03-31T16:57:39+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -13334,12 +13003,10 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/claro": 15,
         "drupal/coffee": 10,
         "drupal/commerce_demo": 5,
         "drupal/commerce_recurring": 10,
         "drupal/drush_language": 5,
-        "drupal/vartheme_bs4": 5,
         "kgaut/potx": 20
     },
     "prefer-stable": true,

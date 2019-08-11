@@ -14,10 +14,6 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "private-packagist": {
-            "type": "composer",
-            "url": "https://repo.packagist.com/neibrs/"
-        },
         "packagist.org": false
     },
     "require": {
@@ -26,9 +22,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/adminimal_admin_toolbar": "~1.0",
-        "drupal/adminimal_theme": "^1.5",
         "drupal/bootstrap": "^3.20",
-        "drupal/claro": "^1.0@alpha",
         "drupal/coffee": "^1.0@beta",
         "drupal/commerce": "^2.13",
         "drupal/commerce_demo": "^1.0@RC",
@@ -43,7 +37,6 @@
         "drupal/migrate_source_csv": "^2.2",
         "drupal/migrate_source_xls": "^1.2",
         "drupal/migrate_tools": "^4.1",
-        "drupal/vartheme_bs4": "^6.0@RC",
         "drupal/vmi": "^2.2",
         "drush/drush": "^9.0.0",
         "kgaut/potx": "dev-8.x-1.x",
