@@ -13,12 +13,16 @@ vendor/bin/drupal site:mode dev
 
 vendor/bin/drush en -y adminimal_admin_toolbar \
   coffee \
-  commerce_demo \
+  commerce \
   config_translation \
   config_update_ui \
   memcache \
   memcache_admin \
   vmi
+
+vendor/bin/drush en -y idcp_core   \
+  items \
+  translation
 #  entity_plus \
 #  user_plus \
 #  neibers_idc \
